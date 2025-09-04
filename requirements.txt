@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 torch
 tokenizers
-=======
-torch
-tokenizers
->>>>>>> b2a3c63f3e93c5bb09be358e3702f1e3bcc310d1
