@@ -8,7 +8,7 @@ from tokenizers import Tokenizer, models, pre_tokenizers, decoders, trainers, no
 
 # define a function to merge my txt files and clean them
 def merge_and_clean(filepaths,output):
-  bengali_pattern = re.compile(r"[^\u0980-\u09FF\u09E6-\u09EF\s.,!?;:()\"'—-]")
+  bengali_pattern = re.compile(r"[^\u0980-\u09FF\u09E6-\u09EF\s.,।!?;:()\"'—-]")
   with open(output,'w',encoding = 'utf-8') as output_file:
     for file in filepaths:
       with open(file,'r',encoding = 'utf-8') as inp_file:
