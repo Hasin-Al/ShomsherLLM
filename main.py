@@ -1,6 +1,6 @@
 import torch
 from Dataset import create_dataloader
-from utils import read_file,add_eos
+from utils import read_text_file,add_eos
 from tokenizers import Tokenizer
 from model import ShomsherLLM
 import torch.optim as optim
@@ -18,7 +18,7 @@ max_len = 256
 bpe_tokenizer = Tokenizer.from_file("tokenizer/bpe_tokenizer.json")
 
 # read the merged and cleaned text file
-text = read_file("/merged.txt")   # you add your cleaned data path here
+text = read_text_file("/merged.txt")   # you add your cleaned data path here
 text_with_eos = add_eos(text)
 
 # split the text into train and val
